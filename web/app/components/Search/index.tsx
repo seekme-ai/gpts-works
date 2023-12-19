@@ -74,7 +74,7 @@ export default ({ setGpts, setLoading }: Props) => {
           <input
             type="text"
             className="flex-1 px-4 py-3 border-2 border-primary bg-white rounded-lg"
-            placeholder="keyword or prompt for searching GPTs"
+            placeholder="输入你的需求，帮你查找合适的工具"
             ref={inputRef}
             value={content}
             disabled={inputDisabled}

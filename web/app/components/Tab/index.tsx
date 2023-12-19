@@ -11,15 +11,15 @@ export default ({ tabValue, setTabValue }: Props) => {
   const tabs: Tab[] = [
     {
       name: "hot",
-      title: "Featured 🔥",
+      title: "热门 🔥",
     },
     {
       name: "latest",
-      title: "Latest",
+      title: "最新",
     },
     {
       name: "random",
-      title: "Random",
+      title: "随机",
     },
   ];
 
