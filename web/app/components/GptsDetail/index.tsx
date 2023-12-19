@@ -34,40 +34,16 @@ export default ({ gpts }: Props) => {
             <div className="mb-8 mt-8 h-px w-full bg-black"></div>
             <div className="mb-6 flex flex-col gap-2 text-sm text-[#808080] sm:text-base lg:mb-8">
               <p className="font-medium">Capabilities</p>
-              <p>
-                <input
-                  type="checkbox"
-                  className="mr-2"
-                  checked={tools && tools.includes("browser")}
-                />
-                Web Browsing
-              </p>
-              <p>
-                <input
-                  type="checkbox"
-                  className="mr-2"
-                  checked={tools && tools.includes("dalle")}
-                />
-                DALL·E Image Generation
-              </p>
-              <p>
-                <input
-                  type="checkbox"
-                  className="mr-2"
-                  checked={tools && tools.includes("python")}
-                />
-                Code Interpreter
-              </p>
             </div>
 
             <div className="flex flex-col gap-4 font-semibold sm:flex-row">
               <a
-                href={gpts.visit_url}
+                href={gpts.short_url}
                 target="_blank"
                 className="flex items-center gap-2 rounded-md border border-solid border-black bg-primary text-white px-6 py-3 truncate"
               >
                 <BsChatDots />
-                <p>Use this GPTs on ChatGPT 👉</p>
+                <p>访问官方网站 👉</p>
               </a>
             </div>
           </div>
