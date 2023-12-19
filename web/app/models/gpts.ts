@@ -70,7 +70,7 @@ export async function getRows(last_id: number, limit: number): Promise<Gpts[]> {
 export async function getRowsByName(name: string): Promise<Gpts[]> {
   const keyword = `%${name}%`;
   const res =
-    await sql`SELECT * FROM gpts WHERE name ILIKE ${keyword} ORDER BY sort DESC LIMIT 50`;
+    await sql`SELECT * FROM gpts WHERE Description ILIKE ${keyword} ORDER BY Id ASC LIMIT 10`;
 
   return getGptsFromSqlResult(res);
 }
@@ -179,9 +179,9 @@ function formatGpts(row: QueryResultRow): Gpts | undefined {
     console.log("parse gpts detail failed: ", e);
   }
 
-  if (isGptsSensitive(gpts)) {
-    return;
-  }
+  // if (isGptsSensitive(gpts)) {
+  //   return;
+  // }
 
   return gpts;
 }
